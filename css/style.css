@@ -151,7 +151,7 @@ header {
 }
 
 .filter-bar h2 {
-    font-size: 18;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -163,13 +163,22 @@ header {
 .search-city {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
     align-content: center;
     height: 49px;
-    width: 28%;
-    background-color: var(--main-bg-color);
-    border: solid 1px 0 1px 0 var(--main-bg-color);
+    width: 395px;
+    background-color: inherit;
     border-radius: 15px;
+    box-sizing: border-box;
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 13px, transparent 13px) 0% 0%/15px 15px no-repeat,
+            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 13px, transparent 13px) 100% 0%/15px 15px no-repeat,
+            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 13px, transparent 13px) 0% 100%/15px 15px no-repeat,
+            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 13px, transparent 13px) 100% 100%/15px 15px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 30px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 30px) calc(100% - 4px) no-repeat,
+            linear-gradient(90deg, #F2F2F2 0%, rgba(245, 245, 245, 1) 84%, #ffffff 100%);
+    border-radius: 15px;
+    padding: 2px;
+    box-sizing: border-box;
 }
 
 
@@ -179,6 +188,10 @@ label.location {
     align-items: center;
     min-width: 50px;
     height: 100%;
+    background-color: var(--main-bg-color);
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    box-sizing: border-box;
 }
 
 .fa-location-dot {
@@ -187,6 +200,7 @@ label.location {
     }
 
 #city {
+
     margin: 1px;
     padding: 10px 20px 10px 20px;
     flex: 1;
@@ -194,6 +208,7 @@ label.location {
     justify-content: center;
     align-items: center;
     border: none;
+    box-sizing: border-box;
 }
 
 #city::placeholder {
@@ -206,14 +221,16 @@ label.location {
 .search {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     padding: 10px 20px;
     font-size: 18px;
     font-weight: 900;
     color: white;
     background-color: #0065FC;
     border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;   
+    border-bottom-right-radius: 15px;
+    border: none;
+    box-sizing: border-box; 
 }
 
 .search-glass {
@@ -315,7 +332,6 @@ section.populaires {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2,1fr);
     gap: 30px;
-   
 }
 
 .hebergements-cards .card {
@@ -414,7 +430,7 @@ section.populaires {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 30px;
+    padding: 60px 30px 30px 30px;
 }
 .activites-cards-main {
     display: flex;
@@ -496,7 +512,7 @@ dd {
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     .populaires-cards {
@@ -543,13 +559,11 @@ dd {
     header {
         width: 100%;
         height: 115px;
-        margin-bottom: 15px;
+       
     }
 
-    .nav-head {
-        display: flex;
+    .nav-head { 
         flex-direction: column;
-        box-sizing: border-box;
     }
 
     .logo-container {
@@ -598,12 +612,6 @@ dd {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-    }
-
-    .filter-bar h2 {
-        font-size: 18;
-        font-weight: 700;
     }
 
     .categories-filter-bar {
@@ -618,9 +626,7 @@ dd {
         align-content: center;
         height: 49px;
         width: 100%;
-        background-color: var(--main-bg-color);
-       
-        border-radius: 15px;
+        
     }
 
     label.location {
@@ -664,11 +670,12 @@ dd {
         border: none;
         padding: 15px 16px 15px 16px;
         border-radius: 15px;
-        background-color: var(--main-color);
+        background-color: var(--main-color); 
+        box-shadow: -1px 5px 14px -3px rgba(0,0,0,0.51);
     }
     
     .fa-magnifying-glass {
-        color: var(--main-bg-color)
+        color: var(--main-bg-color);
     }
 
     .filter-buttons {
@@ -684,9 +691,7 @@ dd {
     /*********** hebergement-and-populaires **********/
 
     .hebergements-and-populaires {
-        display: flex;
         flex-direction: column-reverse;
-        justify-content: space-between;
         gap: 15px;
     }
 
@@ -736,5 +741,9 @@ dd {
 
     footer {
         flex-direction: column;  
+    }
+
+    footer dl {
+        width: 100%;
     }
 }
