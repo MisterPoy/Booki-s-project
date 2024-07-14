@@ -179,6 +179,7 @@ header {
     border-radius: 15px;
     padding: 2px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 
@@ -189,9 +190,9 @@ label.location {
     min-width: 50px;
     height: 100%;
     background-color: var(--main-bg-color);
-    border-top-left-radius: 13px;
-    border-bottom-left-radius: 13px;
-    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
 }
 
 .fa-location-dot {
