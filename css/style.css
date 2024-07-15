@@ -459,8 +459,9 @@ section.populaires {
 .activites-card .card-content {
     display: flex;
     justify-content: flex-start;
-    padding-left: 20px;
-    padding-right: 5px;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
     align-items: center;
     height: 13%;
 }
