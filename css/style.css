@@ -100,10 +100,6 @@ header {
     height: 18px;
 }
 
-.logo-mobile {
-    display: none;
-}
-
 .nav-head {
     height: 100%;
     display: flex;
